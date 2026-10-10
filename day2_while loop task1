@@ -1,0 +1,165 @@
+'''
+#check whether the given number is prime or not
+#to find the total even sum of a given number (from 1 to n)
+s=0
+n=20
+for i in range(2,n+1,2):
+    s+=i
+print(s)
+
+#* * * * *
+#* * * * *
+#* * * * *
+#* * * * *
+#* * * * *
+for j in range(5):
+    for i in range(5):
+        print("*",end=" ")
+    print()
+
+#*
+#* * 
+#* * * 
+#* * * *
+#* * * * *
+for j in range(1,6):
+    for i in range(1,j+1):
+        print("*",end=" ")
+    print()
+
+#A
+#A B
+#A B C
+#A B C D
+#A B C D E
+
+for j in range(1,6):
+    for i in range(1,j+1):
+        print(chr(64+i),end=" ")
+    print()    
+
+for i in range(0,127):
+    print(chr(i))
+
+i=1
+while i<=5:
+    print(i)
+    i+=1
+
+i=5
+while i>=1:
+    print(i)
+    i-=1
+
+
+j=1
+while j<=5:
+    i=1
+    while i<=j:
+        print("*",end=" ")
+        i+=1
+    print()
+    j+=1
+
+Task:
+    Continually ask a user to
+    enter numbers. Add them together.
+    Stop the program and print the
+    final total only when the user
+    types 0.
+n=int(input("Enter a number : "))
+s=n
+while n!=0:
+    n=int(input("Enter a number : "))
+    s+=n
+print(s)
+
+#count the digits
+n=12345
+c=0
+while n>0:
+    n//=10
+    c+=1
+print(c)
+
+#sum of the digits
+n=12345
+c=0
+while n>0:
+    c = c + (n%10)
+    n//=10
+print(c)
+'''
+#A store has 100 chocolates.. Nrmlly Rs.2 per chocolate..
+#If a user buy 1-9 chocolates at same time -> no discount is applied
+#If a user buy 10-19 chocolates at same time -> 5% discount is applied
+#If a user buy 20-49 chocolates at same time -> 7% discount is applied
+#If a user buy 50-74 chocolates at same time -> 9% discount is applied
+#If a user buy 75-100 chocolates at same time -> 13% discount is applied
+#If all chocolates are sold out means print ("Bye Bye")
+#Enter the count : n
+#Total Amount To Pay :
+#Actual Amount :
+#Discount Amount :
+#Remaining Avaliable Chocolates :
+
+chocolate = 100
+while chocolate>0 and True:
+    n = int(input("Enter the count : "))
+    chocolate = chocolate - n
+    if chocolate<0:
+        print("Bye Bye")
+    else:
+        discount = 0
+        total_price = 0
+        total_amount = 0
+        if n>=1 and n<10:
+            total_price = n * 2
+            total_amount = total_price
+        elif n>=10 and n<20:
+            total_price = n * 2
+            discount = (total_price/100)*5
+            total_amount = total_price - discount
+        elif n>=20 and n<50:
+            total_price = n * 2
+            discount = (total_price/100)*7
+            total_amount = total_price - discount
+        elif n>=50 and n<75:
+            total_price = n * 2
+            discount = (total_price/100)*9
+            total_amount = total_price - discount
+        elif n>=75 and n<=100:
+            total_price = n * 2
+            discount = (total_price/100)*13
+            total_amount = total_price - discount
+        print("Total Amount To Pay : ",total_amount)
+        print("Actual Amount : ",total_price)
+        print("Discount Amount :",discount)
+        print("Remaining Avaliable Chocolates :",chocolate)
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
