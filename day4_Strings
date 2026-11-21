@@ -1,0 +1,192 @@
+'''
+python = 10
+a = "python"
+data = """The pass statement is a null operation; it does nothing.
+It acts as a placeholder when a statement is syntactically
+required but no action is desired.
+It is often used in cases where code will be added later, 
+or to define empty functions or classes."""
+print(data)
+x = "i'm mounika"
+y = 'Today "python" Taken'
+
+a = "python programming"
+print(a[0:6])
+print(a[1:6])
+print(a[4])
+print(a[-1])
+print(a[-11:-1])
+print(a[0:])
+print(len(a))
+print(a[:18])
+print(a[:])
+print(a[::-1])
+
+#palindrome
+a = input("Enter Data : ")
+if a == a[::-1]:
+    print("Palindrome")
+else:
+    print("Not A Palindrome")
+
+#case conversion
+b = "PrInT PaLiNdRoMe"
+print(b.lower())
+print(b.upper())
+print(b.capitalize())
+print(b.title())
+print(b.swapcase())
+
+print("hello".center(21))
+print("hello".ljust(20))
+print("hello".rjust(20))
+print("132394".zfill(16))
+
+m = "          project     project         "
+print(m.strip())
+print(m.lstrip())
+print(m.rstrip())
+
+n = "String formatting means inserting variables"
+m = "String$formatting$means$inserting$variables"
+print(n.split())
+print(m.split('$'))
+c = n.split()
+print(''.join(c))
+print(' '.join(c))
+print(m.rsplit('$',2))
+j = "hello world !"
+print(j.partition(' '))
+
+h = "Search & Replace"
+print(h.find('e'))
+print(h.rfind('e'))
+print(h.find('z'))
+print(h.index('l'))
+# print(h.index('os'))
+print(h.replace("e","%"))
+print(h.count("e"))
+print("TN309876".startswith("TN"))
+print("mounika@gmail.com".endswith("@gmail.com"))
+
+print("Mounika".isalpha())
+print("Mounika1234".isalnum())
+print("9384542020".isdigit())
+print("mmm".islower())
+print("MMM".isupper())
+print("Mounika Harini".istitle())
+print(' '.isspace())
+
+a = "Order #402 was shipped at 9:30 AM!"
+caps = 0
+small = 0
+number = 0
+space = 0
+symbol = 0
+total = 0
+for ch in a:
+    total+=1
+    if ch.isupper():
+        caps += 1
+    elif ch.islower():
+        small += 1
+    elif ch.isdigit():
+        number += 1
+    elif ch.isspace():
+        space += 1
+    else:
+        symbol += 1
+print("capital letter:",caps)
+print("small letter:",small)
+print("no of digits:",number)
+print("space contains:",space)
+print("symbols contains:",symbol)
+print("Total Letters:",total)
+
+password = input("Enter the password : ")
+length = 0
+upper = 0
+lower = 0
+digit = 0
+for i in password:
+    length+=1
+    if i.isupper():
+        upper+=1
+    elif i.islower():
+        lower+=1
+    elif i.isdigit():
+        digit+=1
+if length>=8 and upper>=1 and lower>=1 and digit>=1:
+    print("Valid Password")
+else:
+    print("Invalid Password")
+
+stringData = input("Enter a string : ")
+targetValue = input("Enter a character : ")
+print(stringData.count(targetValue))
+
+data = input("Enter a string : ")
+length = len(data)
+for i in range(length):
+    if data[i] in data[i+1:length]:
+        continue
+    else:
+        print(data[i])
+        break
+'''
+print("\n   -- Welcome To Our Shop --  \n")
+products = {
+    1:{"Name":"Watch","Price":2000},
+    2:{"Name":"Phone","Price":25000},
+    3:{"Name":"Sunglass","Price":2500}
+}
+for i in products:
+    print(i," ",products[i]["Name"]," : ",products[i]["Price"])
+print()
+
+ch = int(input('Enter the choice number : '))
+quantity = int(input("Enter the Quantity : "))
+total = products[ch]["Price"] * quantity
+bill=f"""
+          -- Welcome To Our Shop --  
+--------------------------------------------
+Product name     : {products[ch]["Name"]}
+Product Price    : {products[ch]["Price"]}
+Product Quantity : {quantity}
+--------------------------------------------
+Amount to Pay    : Rs. {total}
+"""
+print(bill)
+
+bill="""
+          -- Welcome To Our Shop --  
+--------------------------------------------
+Product name     : {}
+Product Price    : {}
+Product Quantity : {}
+--------------------------------------------
+Amount to Pay    : Rs. {}
+""".format(products[ch]["Name"],products[ch]["Price"],quantity,total)
+print(bill)
+
+bill="""
+          -- Welcome To Our Shop --  
+--------------------------------------------
+Product name     : %s
+Product Price    : %d
+Product Quantity : %d
+--------------------------------------------
+Amount to Pay    : Rs. %d
+"""%(products[ch]["Name"],products[ch]["Price"],quantity,total)
+print(bill)
+
+
+
+
+
+
+
+
+
+
+
